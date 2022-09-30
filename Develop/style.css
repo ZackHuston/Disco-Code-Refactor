@@ -67,5 +67,25 @@ textarea{
 
 .saveBtn i:hover {
   font-size: 20px;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease-;
 }
+
+.btns{
+  padding: 8px 15px 8px 15px;
+  border-radius: 9px;
+  border-style: dashed;
+  border-color: grey;
+  background-color: #77dd77;
+}
+
+.btns:hover{
+  background-color: #06AED5;
+}
+
+input[type = text]{
+  width: 800px;
+  height: 100px;
+  background-color: #06AED5;
+  
+}
+

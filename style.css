@@ -89,3 +89,7 @@ input[type = text]{
   
 }
 
+#time{
+  text-align: center;
+  margin-bottom: 20px;
+}

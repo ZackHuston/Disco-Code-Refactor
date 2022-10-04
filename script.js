@@ -21,8 +21,10 @@ for (let index = 0; index < hours.length; index++) {
 
 var buttonsArray = document.querySelectorAll('.btns')
 buttonsArray.forEach(function(button){
-    button.addEventListener('click', function(banana){
-        console.log(banana.currentTarget.dataset.hour)
+    button.addEventListener('click', function(event){
+        var hour = event.currentTarget.dataset.hour
+        var text = event.currentTarget.parentElement.children[1].value
+        localStorage.setItem(hour, text)
     })
 })
 

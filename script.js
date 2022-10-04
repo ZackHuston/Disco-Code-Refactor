@@ -1,7 +1,23 @@
 var date = new Date();
 var n = date.toDateString();
-var time = date.toLocaleTimeString();
+var time = date.toLocaleTimeString('en-US', {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+});
 var currentHour = date.getHours();
+
+document.getElementById('currentDay').innerText = time
+
+setInterval(function(){
+    document.getElementById('currentDay').innerText = new Date().toLocaleTimeString('en-US', {
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+    })
+}, 1000);
 
 
 hours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
@@ -12,7 +28,7 @@ for (let index = 0; index < hours.length; index++) {
     var outerDiv = document.createElement('div')
     outerDiv.classList.add('row', 'time-block')
     outerDiv.innerHTML = `<div class="col-md-1 hour">${getTimeLabel(hours[index])}</div>
-    <textarea class="col-md-10 description ${getColorClass(hours[index])}"></textarea>
+    <textarea class="col-md-10 description ${getColorClass(hours[index])}">${localStorage.getItem(hours[index]) || ""}</textarea>
     <button class="col-md-1 saveBtn btns" data-hour=${hours[index]}>
       <i class="fas fa-save"></i>
     </button>`

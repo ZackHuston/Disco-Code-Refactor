@@ -73,13 +73,13 @@ textarea{
 .btns{
   padding: 8px 15px 8px 15px;
   border-radius: 9px;
-  border-style: dashed;
+
   border-color: grey;
-  background-color: #77dd77;
+  background-color: #06AED5;;
 }
 
 .btns:hover{
-  background-color: #06AED5;
+  background-color: grey;
 }
 
 input[type = text]{
